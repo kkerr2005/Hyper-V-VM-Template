@@ -39,6 +39,8 @@ https://wmatthyssen.com/2019/09/09/powershell-bginfo-automation-script-for-windo
 
 ## Variables
 
+Start-Transcript -Path "c:\temp\bginfo.log"
+
 $bgInfoFolder = "C:\BgInfo"
 $bgInfoFolderContent = $bgInfoFolder + "\*"
 $itemType = "Directory"
@@ -159,3 +161,4 @@ Start-Sleep 3
 stop-process -Id $PID 
 
 ## ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Stop-Transcript
